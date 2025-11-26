@@ -75,13 +75,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
-@media (max-width: 650px) {
-  .nav {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
 .nav a {
   color: var(--muted);
   text-decoration: none;
@@ -129,37 +122,39 @@ body {
 
 /* ---------- Hero ---------- */
 .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;  /* verticale centrering */
-    align-items: center;      /* horizontale centrering */
-    min-height: calc(70vh - 60px); /* hoogte minus header zodat er ruimte boven is */
-    padding: 60px 20px;       /* ruimte boven en onder */
-    text-align: center;        /* tekst centreren */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* verticale centrering */
+  align-items: center; /* horizontale centrering */
+  min-height: calc(
+    70vh - 60px
+  ); /* hoogte minus header zodat er ruimte boven is */
+  padding: 60px 20px; /* ruimte boven en onder */
+  text-align: center; /* tekst centreren */
 }
 
 .hero-grid {
-    display: flex;            /* flex ipv grid */
-    flex-direction: column;   /* alles onder elkaar */
-    gap: 20px;                /* ruimte tussen elementen */
-    max-width: 700px;         /* optioneel, maximale breedte */
-    text-align: center;       /* tekst centreren */
+  display: flex; /* flex ipv grid */
+  flex-direction: column; /* alles onder elkaar */
+  gap: 20px; /* ruimte tussen elementen */
+  max-width: 700px; /* optioneel, maximale breedte */
+  text-align: center; /* tekst centreren */
 }
 
 .hero-text {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;               /* ruimte tussen h1, lead, buttons */
-    align-items: center;      /* centreren */
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* ruimte tussen h1, lead, buttons */
+  align-items: center; /* centreren */
 }
 .hero-text h1 {
   font-size: 2.6rem;
   margin: 0 0 10px;
 }
 .hero-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .lead {
   color: var(--muted);
@@ -518,6 +513,34 @@ body {
   .profile-card {
     width: 100%;
   }
+  /* Mobile nav styling */
+  .nav {
+    display: none; /* standaard verborgen op mobiel */
+    flex-direction: column; /* items onder elkaar */
+    gap: 12px; /* ruimte tussen items */
+    background: var(--panel); /* optioneel, achtergrond */
+    position: absolute;
+    top: 60px; /* onder de header */
+    right: 0;
+    left: 0;
+    padding: 10px 20px;
+    border-bottom: 2px solid white;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .nav.active {
+    display: flex; /* zichtbaar als actief */
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav a {
+    padding: 8px 12px;
+    display: block;
+  }
 }
 
 /* small accessibility */
@@ -528,14 +551,18 @@ a:focus {
 }
 
 .meta {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .coming-soon-card {
   width: 100%; /* neemt de volledige containerbreedte */
   padding: 40px;
   text-align: center;
-  background: linear-gradient(180deg, rgba(79,182,255,0.1), rgba(79,182,255,0.05));
+  background: linear-gradient(
+    180deg,
+    rgba(79, 182, 255, 0.1),
+    rgba(79, 182, 255, 0.05)
+  );
   border: 2px dashed var(--accent);
   color: var(--accent);
   font-weight: 700;
@@ -546,7 +573,11 @@ a:focus {
 
 .coming-soon-card:hover {
   transform: scale(1.02);
-  background: linear-gradient(180deg, rgba(79,182,255,0.15), rgba(79,182,255,0.07));
+  background: linear-gradient(
+    180deg,
+    rgba(79, 182, 255, 0.15),
+    rgba(79, 182, 255, 0.07)
+  );
 }
 
 .coming-soon-card p {
@@ -570,44 +601,44 @@ a:focus {
   width: 100%;
   padding: 12px;
   border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.04);
+  border: 1px solid rgba(255, 255, 255, 0.04);
   background: transparent;
   color: var(--text);
   margin-top: 4px;
 }
 
 .experience-card {
-    border: 2px solid white;    /* witte rand */
-    border-radius: 12px;        /* afgeronde hoeken */
-    padding: 30px 24px;         /* ruimte binnen de rand */
-    margin-top: 24px;           /* ruimte boven/onder */
-    background: transparent;     /* alleen rand zichtbaar */
-    transition: border-color 0.3s ease;
+  border: 2px solid white; /* witte rand */
+  border-radius: 12px; /* afgeronde hoeken */
+  padding: 30px 24px; /* ruimte binnen de rand */
+  margin-top: 24px; /* ruimte boven/onder */
+  background: transparent; /* alleen rand zichtbaar */
+  transition: border-color 0.3s ease;
 }
 
 .experience-card:hover {
-    border-color: var(--accent); /* optionele hoverkleur */
+  border-color: var(--accent); /* optionele hoverkleur */
 }
 
 .skills-card {
-    border: 2px solid white;    /* witte rand */
-    border-radius: 12px;        /* afgeronde hoeken */
-    padding: 30px 24px;         /* ruimte binnen de rand */
-    margin-top: 24px;           /* ruimte boven het blok */
-    margin-bottom: 24px;        /* ruimte onder het blok */
-    background: transparent;    /* alleen rand zichtbaar */
-    transition: border-color 0.3s ease;
+  border: 2px solid white; /* witte rand */
+  border-radius: 12px; /* afgeronde hoeken */
+  padding: 30px 24px; /* ruimte binnen de rand */
+  margin-top: 24px; /* ruimte boven het blok */
+  margin-bottom: 24px; /* ruimte onder het blok */
+  background: transparent; /* alleen rand zichtbaar */
+  transition: border-color 0.3s ease;
 }
 
 .skills-card:hover {
-    border-color: var(--accent); /* optionele hoverkleur */
+  border-color: var(--accent); /* optionele hoverkleur */
 }
 
 .card-listitems__contact {
-    list-style-type: none;
-    text-decoration: none;
-    color: white;
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 5px 5px;
+  list-style-type: none;
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px 5px;
 }
