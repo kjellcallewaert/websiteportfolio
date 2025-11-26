@@ -302,23 +302,21 @@ body {
 
 /* testimonials */
 .testimonials {
-  display: flex;
-  overflow: hidden;
   position: relative;
-  min-height: 120px;
+  min-height: 120px; /* hoog genoeg voor de grootste testimonial */
 }
+
 .testi-item {
+  position: absolute;  /* alle items absoluut */
+  inset: 0;            /* top:0; bottom:0; left:0; right:0 */
   opacity: 0;
   transform: translateY(8px);
-  transition: var(--transition);
-  position: absolute;
-  left: 0;
-  right: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
 .testi-item.active {
   opacity: 1;
-  transform: none;
-  position: relative;
+  transform: translateY(0);
 }
 .testi-item p {
   font-size: 1.05rem;
