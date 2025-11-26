@@ -153,9 +153,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if(fallback){
     fallback.addEventListener('click', ()=>{
-      const email = 'email@voorbeeld.com';
-      const subject = encodeURIComponent('Opdracht via portfolio');
-      const body = encodeURIComponent('Hoi,\n\nIk wil graag samenwerken met jou. Vertel hier kort over je project:\n\n');
+      const email = 'kjellcallewaert22@gmail.com';
+      const subject = encodeURIComponent('Vul dit veld in a.u.b.');
+      const body = encodeURIComponent('Vul dit veld in a.u.b.');
       window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
     });
   }
