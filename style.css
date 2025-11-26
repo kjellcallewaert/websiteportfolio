@@ -595,3 +595,9 @@ a:focus {
 .skills-card:hover {
     border-color: var(--accent); /* optionele hoverkleur */
 }
+
+.card-listitems__contact {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+}
