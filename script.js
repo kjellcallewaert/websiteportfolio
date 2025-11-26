@@ -116,20 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 })();
 
-/* TESTIMONIAL SLIDER (simple auto rotate) */
-(function testimonialSlider() {
-  const items = $$('.testi-item');
-  if (!items.length) return;
-  let idx = 0;
-  const show = (i) => {
-    items.forEach((it, j) => it.classList.toggle('active', i === j));
-  };
-  show(idx);
-  setInterval(() => {
-    idx = (idx + 1) % items.length;
-    show(idx);
-  }, 4500);
-})();
 
 /* CONTACT FORM - simple client validation + mailto fallback */
 (function contactForm() {
