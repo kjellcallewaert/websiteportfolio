@@ -515,6 +515,13 @@ body {
   }
   /* Mobile nav styling */
   .nav {
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav {
     display: none; /* standaard verborgen op mobiel */
     flex-direction: column; /* items onder elkaar */
     gap: 12px; /* ruimte tussen items */
@@ -535,6 +542,9 @@ body {
   .nav ul {
     flex-direction: column;
     gap: 10px;
+    align-items: center; /* horizontaal centreren */
+    margin: 0;
+    padding: 0;
   }
 
   .nav a {
