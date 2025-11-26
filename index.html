@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio — Home</title>
+    <link rel="stylesheet" href="./style.css">
+<script src="./script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="site-header">
+        <div class="container nav-inner">
+            <a class="logo" href="./index.html">Kjell Callewaert<span class="dot">.</span></a>
+
+            <button id="nav-toggle" class="nav-toggle" aria-label="Menu">
+                <span class="hamb"></span>
+            </button>
+
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="./index.html" class="active">Home</a></li>
+                    <li><a href="./zabout.html">Over mij</a></li>
+                    <li><a href="./projects.html">Projecten</a></li>
+                    <li><a href="./zcontact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <h1>Hoi — ik ben <span class="accent">Kjell Callewaert</span></h1>
+                    <p class="lead">Web Developer & Designer — ik bouw snelle, toegankelijke en visueel sterke websites.</p>
+                    <div class="cta-row">
+                        <a class="btn" href="./projects.html">Bekijk mijn werk</a>
+                        <a class="btn ghost" href="./zabout.html">Meer over mij</a>
+                    </div>
+                    <div class="meta">
+                        <span>Freelance • Remote</span>
+                        <span>•</span>
+                        <span>Beschikbaar voor opdrachten</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="section" id="skills">
+            <div class="container skills-card">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill">
+                        <h3>Frontend</h3>
+                        <p>HTML • CSS • JS • React</p>
+                        <div class="skill-bar">
+                            <div style="width:90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <h3>Design</h3>
+                        <p>Figma • UI/UX • Prototyping</p>
+                        <div class="skill-bar">
+                            <div style="width:85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <h3>Performance</h3>
+                        <p>Accessibility • SEO • Best practices</p>
+                        <div class="skill-bar">
+                            <div style="width:80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <h3>Tools</h3>
+                        <p>Git • VSCode • Netlify</p>
+                        <div class="skill-bar">
+                            <div style="width:88%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMING SOON PROJECT -->
+        <section class="section section-dark" id="projects-preview">
+            <div class="container">
+                <h2 class="section-title">Uitgelichte projecten</h2>
+
+                <div class="coming-soon-card">
+                    <h3>COMING SOON</h3>
+                    <p>Nieuwe projecten worden binnenkort toegevoegd.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS PREVIEW -->
+        <!--<section class="section section-dark" id="projects-preview">
+      <div class="container">
+        <h2 class="section-title">Uitgelichte projecten</h2>
+
+        <div class="projects-grid">
+          <article class="project-card" data-category="web">
+            <img src="images/p1.jpg" alt="Project 1 screenshot">
+            <div class="project-body">
+              <h3>Project One</h3>
+              <p>Custom portfolio & CMS integration.</p>
+              <div class="project-actions">
+                <button class="btn small" data-modal-target="modal-p1">Details</button>
+                <a class="btn ghost small" href="#">Live</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="ecommerce">
+            <img src="images/p2.jpg" alt="Project 2 screenshot">
+            <div class="project-body">
+              <h3>Shop UI</h3>
+              <p>E-commerce UI & checkout flow (React).</p>
+              <div class="project-actions">
+                <button class="btn small" data-modal-target="modal-p2">Details</button>
+                <a class="btn ghost small" href="#">Live</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="experiment">
+            <img src="images/p3.jpg" alt="Project 3 screenshot">
+            <div class="project-body">
+              <h3>3D Experiment</h3>
+              <p>WebGL interactie en micro-animaties.</p>
+              <div class="project-actions">
+                <button class="btn small" data-modal-target="modal-p3">Details</button>
+                <a class="btn ghost small" href="#">Live</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-more">
+          <a class="btn" href="projects.html">Bekijk alle projecten</a>
+        </div>
+      </div>
+    </section> -->
+
+        <!-- TESTIMONIALS -->
+        <section class="section" id="testimonials">
+            <div class="container experience-card">
+                <h2 class="section-title">Ervaring</h2>
+
+                <div class="testimonials" aria-live="polite">
+                    <div class="testi-item active">
+                        <p>Momenteel heb ik nog geen klantenverhalen, maar ik ben druk bezig met projecten en mijn portfolio te vervolledigen.</p>
+                        <p>Wil je een samenwerking starten of een project bespreken? Vul het formulier hieronder in en ik neem zo snel mogelijk contact op.</p>
+                    </div>
+                    <div class="testi-item">
+
+                    </div>
+                </div>
+
+                <!-- Nieuw formulier -->
+                <form id="testimonial-contact-form" class="contact-form" action="https://formspree.io/f/xjkdqppp" method="POST" novalidate>
+                    <label>Naam
+                        <input type="text" name="name" required placeholder="Jouw naam">
+                    </label>
+
+                    <label>E-mail
+                        <input type="email" name="email" required placeholder="naam@voorbeeld.com">
+                    </label>
+
+                    <label>Bericht
+                        <textarea name="message" rows="4" required placeholder="Vertel kort over je project of vraag..."></textarea>
+                    </label>
+
+                    <div class="form-actions">
+                        <button class="btn" type="submit">Verstuur bericht</button>
+                    </div>
+
+                    <div id="form-msg-testimonials" class="form-msg" role="status" aria-live="polite"></div>
+                </form>
+            </div>
+            <script>
+                document.getElementById('testimonial-contact-form').addEventListener('submit', async function (e) {
+                    e.preventDefault();
+                    const form = e.target;
+                    const data = new FormData(form);
+
+                    const res = await fetch(form.action, {
+                        method: 'POST',
+                        headers: { 'Accept': 'application/json' },
+                        body: data
+                    });
+
+                    const msgDiv = document.getElementById('form-msg-testimonials');
+
+                    if (res.ok) {
+                        msgDiv.textContent = "Bedankt! Je bericht is succesvol verstuurd";
+                        msgDiv.style.color = "var(--accent)";
+                        form.reset();
+                    } else {
+                        msgDiv.textContent = "Er ging iets mis. Probeer later opnieuw.";
+                        msgDiv.style.color = "red";
+                    }
+                });
+            </script>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+
+            <div class="footer-left">
+                <a class="logo" href="./index.html">Kjell Callewaert<span class="dot">.</span></a>
+                <p class="muted">Web developer & designer — BE</p>
+            </div>
+
+            <nav class="footer-right">
+                <ul class="footer-links">
+                    <li><a href="./projects.html">Projecten</a></li>
+                    <li><a href="./zabout.html">Over mij</a></li>
+                    <li><a href="./zcontact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </footer>
+
+    <!-- MODALS (hidden until opened) -->
+    <div class="modal" id="modal-p1" aria-hidden="true">
+        <div class="modal-inner" role="dialog" aria-modal="true" aria-labelledby="modal-p1-title">
+            <button class="modal-close" data-close>×</button>
+            <h3 id="modal-p1-title">Project One</h3>
+            <p>Uitgebreide beschrijving van Project One: rol, tech stack, uitdagingen en resultaat.</p>
+            <ul>
+                <li>Technologie: HTML, CSS, JS, Netlify</li>
+                <li>Services: CMS integratie, SEO verbeteringen</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-p2" aria-hidden="true">
+        <div class="modal-inner" role="dialog" aria-modal="true" aria-labelledby="modal-p2-title">
+            <button class="modal-close" data-close>×</button>
+            <h3 id="modal-p2-title">Shop UI</h3>
+            <p>Design en implementatie van een moderne winkelervaring met checkout optimalisaties.</p>
+            <ul>
+                <li>Technologie: React, Stripe, Cypress tests</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-p3" aria-hidden="true">
+        <div class="modal-inner" role="dialog" aria-modal="true" aria-labelledby="modal-p3-title">
+            <button class="modal-close" data-close>×</button>
+            <h3 id="modal-p3-title">3D Experiment</h3>
+            <p>Interactieve WebGL demo met performance optimalisatie voor mobile.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

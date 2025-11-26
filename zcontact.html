@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact — Portfolio</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container nav-inner">
+            <a class="logo" href="./index.html">JouwNaam<span class="dot">.</span></a>
+            <button id="nav-toggle" class="nav-toggle" aria-label="Menu">
+                <span class="hamb"></span>
+            </button>
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./zabout.html">Over mij</a></li>
+                    <li><a href="./projects.html">Projecten</a></li>
+                    <li><a href="./zcontact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container contact-grid">
+                <div class="contact-card">
+                    <h1>Contact</h1>
+                    <p class="lead">Heb je een project of wil je samenwerken? Stuur een bericht.</p>
+
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/xjkdqppp" method="POST" novalidate>
+                        <label>Naam
+                            <input type="text" name="name" required placeholder="Jouw naam">
+                        </label>
+
+                        <label>E-mail
+                            <input type="email" name="email" required placeholder="naam@voorbeeld.com">
+                        </label>
+
+                        <label>Onderwerp
+                            <input type="text" name="subject" placeholder="Bijv. Website redesign">
+                        </label>
+
+                        <label>Bericht
+                            <textarea name="message" rows="6" required placeholder="Vertel kort over je project..."></textarea>
+                        </label>
+
+                        <div class="form-actions">
+                            <button class="btn" type="submit">Verstuur bericht</button>
+                            <button class="btn ghost" type="button" id="mailto-fallback">Open e-mail</button>
+                        </div>
+
+                        <div id="form-msg" class="form-msg" role="status" aria-live="polite"></div>
+                    </form>
+                </div>
+
+                <aside class="contact-info">
+                    <div class="card">
+                        <h3>Contactgegevens</h3>
+                        <p>Email: email@voorbeeld.com</p>
+                        <p>Locatie: Amsterdam, Nederland</p>
+                        <p>Telefoon: +31 6 1234 5678</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Kaart</h3>
+                        <!-- simpele embed; verander src naar gewenste locatie -->
+                        <iframe title="Locatie kaart" src="https://maps.google.com/maps?q=Amsterdam&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                    </div>
+
+                    <div class="card">
+                        <h3>Volg</h3>
+                        <div class="socials">
+                            <a href="#">GitHub</a>
+                            <a href="#">LinkedIn</a>
+                            <a href="#">Twitter</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <a class="logo" href="./index.html">JouwNaam<span class="dot">.</span></a>
+            <nav>
+                <ul class="footer-links">
+                    <li><a href="./projects.html">Projecten</a></li>
+                    <li><a href="./zabout.html">Over mij</a></li>
+                    <li><a href="./zcontact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="muted">© <span id="year-4"></span> JouwNaam</div>
+        </div>
+    </footer>
+<script>
+document.getElementById('contact-form').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+
+  const res = await fetch(form.action, {
+    method: 'POST',
+    headers: { 'Accept': 'application/json' },
+    body: data
+  });
+
+  const msgDiv = document.getElementById('form-msg');
+
+  if (res.ok) {
+    msgDiv.textContent = "Bedankt! Je bericht is verzonden.";
+    msgDiv.style.color = "#4fb6ff"; // accentkleur
+    form.reset();
+  } else {
+    msgDiv.textContent = "Er ging iets mis. Probeer later opnieuw.";
+    msgDiv.style.color = "red";
+  }
+});
+</script>
+</body>
+
+</html>
