@@ -650,3 +650,7 @@ a:focus {
   border-radius: 10px;
   padding: 5px 5px;
 }
+
+.nav-btn-project {
+  color: #4fb6ff;
+}
